@@ -1,0 +1,7 @@
+baseURL = "/"
+languageCode = "it-it"
+title = "Assembler Computer"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Assistenza informatica, riparazioni e soluzioni su misura"

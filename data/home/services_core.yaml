@@ -1,0 +1,19 @@
+- id: assistenza
+  title: "Assistenza PC e Notebook"
+  image: "img/services/assist.png"
+  text: "Assistenza tecnica su Windows, macOS e Linux. Interventi rapidi e soluzioni concrete, direttamente in negozio. Anche a domicilio!"
+
+- id: riparazioni
+  title: "Riparazioni rapide in sede"
+  image: "img/services/ripa.png"
+  text: "Rimozione virus, ripristino sistemi, recupero dati e riparazioni hardware. Diagnostica gratuita e preventivi chiari."
+
+- id: assemblaggi
+  title: "Assemblaggi su misura"
+  image: "img/services/monta.png"
+  text: "Computer assemblati in base alle reali esigenze del cliente. Componenti selezionati per affidabilità e durata nel tempo. NO PC Gaming."
+
+- id: toners
+  title: "Ingrosso Toner"
+  image: "img/services/toner.png"
+  text: "Toner originali e compatibili per le piu' diffuse stampanti in pronta consegna con prezzi da ingrosso per acquisti in bundle."

@@ -1,0 +1,12 @@
+<section class="home-services-other">
+  <h2>Altri servizi disponibili</h2>
+
+  <ul class="services-list">
+    {{ range site.Data.home.services_other }}
+      <li>
+        <strong>{{ .title }}</strong>
+        <span>{{ .text }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</section>
