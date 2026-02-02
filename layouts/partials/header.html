@@ -1,10 +1,39 @@
 <header class="site-header">
-  <nav class="site-nav">
-    <a href="/">Home</a>
-    <a href="/riparazioni/">Riparazioni</a>
-    <a href="/servizi/">Servizi</a>
-    <a href="/contatti/">Contatti</a>
-    <a href="/offerte/">Offerte</a>
-    <a href="https://assemblerstudio.it" target="_blank">Assembler Studio</a>
-  </nav>
+  <div class="header-inner">
+
+    <a href="/" class="site-logo">
+  <img src="{{ "img/logo.png" | relURL }}" alt="Assembler Computer">
+</a>
+
+    <nav class="site-nav" id="site-nav">
+  <a href="/" class="nav-link {{ if eq .RelPermalink "/" }}active{{ end }}">Home</a>
+
+  <a href="/riparazioni/" class="nav-link {{ if eq .RelPermalink "/riparazioni/" }}active{{ end }}">
+    Riparazioni
+  </a>
+
+  <a href="/servizi/" class="nav-link {{ if eq .RelPermalink "/servizi/" }}active{{ end }}">
+    Servizi
+  </a>
+
+  <a href="/contatti/" class="nav-link {{ if eq .RelPermalink "/contatti/" }}active{{ end }}">
+    Contatti
+  </a>
+
+  <a href="/offerte/" class="nav-link {{ if eq .RelPermalink "/offerte/" }}active{{ end }}">
+    Offerte
+  </a>
+
+  <a href="https://assemblerstudio.it" target="_blank" class="nav-link nav-external">
+    Assembler Studio
+  </a>
+</nav>
+
+    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
 </header>
