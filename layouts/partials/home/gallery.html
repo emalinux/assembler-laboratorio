@@ -1,0 +1,24 @@
+<section class="home-gallery">
+
+  <div class="gallery-viewport">
+
+    <div class="gallery-track">
+      {{ range $i, $img := site.Data.home.hero.images }}
+        <div class="gallery-slide">
+          <img src="{{ $img | relURL }}" alt="">
+        </div>
+      {{ end }}
+    </div>
+
+    <button class="gallery-arrow prev" aria-label="Slide precedente">‹</button>
+    <button class="gallery-arrow next" aria-label="Slide successiva">›</button>
+
+    <div class="gallery-dots">
+      {{ range $i, $img := site.Data.home.hero.images }}
+        <button class="gallery-dot" data-index="{{ $i }}"></button>
+      {{ end }}
+    </div>
+
+  </div>
+
+</section>

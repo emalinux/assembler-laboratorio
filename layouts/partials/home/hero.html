@@ -1,32 +1,26 @@
-<section class="home-hero">
-<div class="hero-intro">
-  <p class="hero-eyebrow">Assistenza informatica</p>
-  <h1 class="hero-title">
-    Ripariamo, assembliamo, risolviamo.
-  </h1>
-  <p class="hero-sub">
-    Vendita e riparazione PC e notebook dal 1999.
-  </p>
-</div>
-  <div class="hero-viewport">
+<section class="hero-main">
+  <div class="hero-main-inner">
 
-    <div class="hero-track">
-      {{ range $i, $img := site.Data.home.hero.images }}
-        <div class="hero-slide">
-          <img src="{{ $img | relURL }}" alt="">
-        </div>
-      {{ end }}
+    <div class="hero-main-media">
+      <img src="/img/hero/maglietta.webp" alt="Laboratorio Assembler Computer">
     </div>
 
-    <!-- Frecce -->
-    <button class="hero-arrow prev" aria-label="Slide precedente">‹</button>
-    <button class="hero-arrow next" aria-label="Slide successiva">›</button>
+    <div class="hero-main-copy">
+      <span class="hero-main-eyebrow">Assistenza informatica</span>
 
-    <!-- Dot navigation -->
-    <div class="hero-dots">
-      {{ range $i, $img := site.Data.home.hero.images }}
-        <button class="hero-dot" data-index="{{ $i }}" aria-label="Vai alla slide {{ add $i 1 }}"></button>
-      {{ end }}
+      <h1 class="hero-main-title">
+        Ripariamo, assembliamo, risolviamo.
+      </h1>
+
+      <p class="hero-main-sub">
+        Vendita e riparazione PC e notebook dal 1999.
+      </p>
+
+      <p class="hero-main-body">
+        Siamo un laboratorio informatico indipendente.<br>
+        Da oltre 20 anni risolviamo problemi reali, su macchine reali.<br>
+        Ascoltiamo, analizziamo e forniamo <strong>soluzioni concrete</strong>.
+      </p>
     </div>
 
   </div>
