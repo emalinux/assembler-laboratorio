@@ -577,3 +577,66 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* =========================
+   REPAIRS (STATIC PREVIEW)
+   ========================= */
+
+.home-repairs {
+  padding: 4rem 1.5rem;
+}
+
+.section-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: .4rem;
+}
+
+.section-header p {
+  font-size: .95rem;
+  color: #666;
+}
+
+.repairs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.repair-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.repair-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.repair-card h3 {
+  font-size: 1.05rem;
+  margin: 1rem 1rem .4rem;
+}
+
+.repair-card p {
+  font-size: .9rem;
+  line-height: 1.55;
+  color: #555;
+  margin: 0 1rem 1.2rem;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .repairs-grid {
+    grid-template-columns: 1fr;
+  }
+}
