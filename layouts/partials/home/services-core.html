@@ -1,19 +1,22 @@
-<section class="home-services-core">
-  <h2>I nostri servizi principali</h2>
+<section class="home-services-core" id="servizi">
+  <div class="section-header">
+    <h2>I nostri servizi principali</h2>
+  </div>
 
   <div class="services-grid">
     {{ range .Site.Data.home.services_core }}
-      <article class="service-card">
+      <article class="service-card reveal">
         <div class="service-image">
-          <img src="{{ .image | relURL }}" alt="">
+          <img src="{{ .image | relURL }}" alt="{{ .title }}">
         </div>
 
         <div class="service-content">
           <h3>{{ .title }}</h3>
           <p>{{ .text }}</p>
-          <a class="service-link" href="/servizi/">Scopri di più →</a>
+          <a class="service-link" href="#servizi">Scopri di più →</a>
         </div>
       </article>
     {{ end }}
   </div>
+
 </section>

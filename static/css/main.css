@@ -89,7 +89,7 @@ p {
 main {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   padding: 2rem 1rem;
 }
 
@@ -213,6 +213,27 @@ a:hover {
   .nav-toggle {
     display: flex;
   }
+}
+
+nav a.active {
+  font-weight: 600;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #f5f500; /* giallo Assembler */
+  border-radius: 2px;
+}
+
+.home-services-core,
+.home-repairs {
+  margin-top: -1rem;
 }
 
 /* =========================
@@ -583,7 +604,7 @@ a:hover {
    ========================= */
 
 .home-repairs {
-  padding: 4rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .section-header {
@@ -593,7 +614,7 @@ a:hover {
 
 .section-header h2 {
   font-size: 1.8rem;
-  margin-bottom: .4rem;
+  margin-bottom: .2rem;
 }
 
 .section-header p {
@@ -611,8 +632,9 @@ a:hover {
 
 .repair-card {
   background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   overflow: hidden;
 }
 
@@ -623,20 +645,141 @@ a:hover {
 }
 
 .repair-card h3 {
+  position: relative;
   font-size: 1.05rem;
-  margin: 1rem 1rem .4rem;
+  font-weight: 600;          /* uniformiamo col core */
+  margin: 1rem 1.25rem .5rem;
+  padding-left: 1rem;        /* spazio per la linea */
+}
+
+.repair-card h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 3px;
+  height: 1.1em;
+  background: #f5f500;
+  border-radius: 2px;
 }
 
 .repair-card p {
   font-size: .9rem;
   line-height: 1.55;
   color: #555;
-  margin: 0 1rem 1.2rem;
+  margin: 0 1.25rem 1.5rem;
 }
 
 /* mobile */
 @media (max-width: 900px) {
   .repairs-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   REPAIR CARD HOVER
+   ========================= */
+
+.repair-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.repair-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.repair-card img {
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.repair-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1);
+}
+
+/* REVEAL ON SCROLL */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section {
+  scroll-margin-top: 130px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   BRAND CAROUSEL
+   ========================= */
+
+.home-brands {
+  padding: 2rem 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.brands-track {
+  max-width: 1200px;   /* ← COME IL RESTO DEL SITO */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.brands-list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: brandScroll 35s linear infinite;
+  list-style: none;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+.brands-list li {
+  flex: 0 0 auto;
+}
+
+.brands-list img {
+  height: 34px;                 /* QUI REGOLI LA POTENZA */
+  width: auto;
+  opacity: 0.6;
+  filter: grayscale(1);
+  transition: opacity .3s ease, filter .3s ease;
+}
+
+.brands-list img:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.home-brands {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* movimento */
+@keyframes brandScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .brands-list img {
+    height: 26px;
   }
 }
