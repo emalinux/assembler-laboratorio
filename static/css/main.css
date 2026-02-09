@@ -783,3 +783,87 @@ html {
     height: 26px;
   }
 }
+
+/* =========================
+   CONTACTS PAGE
+   ========================= */
+
+.page-contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.contacts-location {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+  
+  .contacts-intro {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+  
+.contacts-intro h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+  
+.contacts-intro h2::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: #f5f500;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+}
+  
+.contacts-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+  
+.contacts-intro p {
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+  
+.contacts-intro strong {
+    font-weight: 500;
+    color: #111;
+}
+  
+.contacts-intro hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid textarea {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<main class="page-contacts">
+
+  <section class="contacts-location">
+    <div class="contacts-grid">
+
+      <div class="contacts-intro">
+        {{ .Content }}
+      </div>
+
+      <div class="contacts-map">
+        <iframe
+          src="https://www.google.com/maps?q=Via%2020%20Settembre%2011%20Cuneo&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contacts-form">
+    <h2>Scrivici</h2>
+
+    <form name="contatti" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contatti">
+
+      <div class="form-grid">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
+        <textarea name="messaggio" rows="5" placeholder="Messaggio" required></textarea>
+      </div>
+
+      <button type="submit">Invia messaggio</button>
+    </form>
+  </section>
+
+</main>
+
+{{ end }}

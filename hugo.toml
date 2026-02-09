@@ -5,3 +5,8 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Assistenza informatica, riparazioni e soluzioni su misura"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  
