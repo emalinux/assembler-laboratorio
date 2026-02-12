@@ -24,6 +24,10 @@ body {
   background-color: #fff;
 }
 
+body {
+  background: #f3f4f6;
+}
+
 /* =========================
    GENERIC ELEMENTS
    ========================= */
@@ -58,15 +62,14 @@ p {
    ========================= */
 
 .site-logo img {
-  height: 65px;
+  height: 90px;
   width: auto;
   display: block;
 }   
 
-.site-header,
-.site-footer {
-  padding: 1rem;
-  background: #f5f5f5;
+.site-header {
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.85);
 }
 
 .site-header {
@@ -532,6 +535,7 @@ nav a.active::after {
   height: 100%;
 }
 
+
 /* =========================
    ALTRI SERVIZI
    ========================= */
@@ -539,17 +543,49 @@ nav a.active::after {
 .home-services-other {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2.5rem 1.5rem;
 }
 
-.services-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.services-other-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
 }
 
-.services-list li strong {
-  font-weight: 500;
+.service-mini h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.service-mini h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 3px;
+  height: 1em;
+  background: #f5f500;
+}
+
+.service-mini p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .services-other-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mini-icon {
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+  opacity: 0.7;
 }
 
 /* =========================
@@ -866,4 +902,137 @@ html {
   .form-grid textarea {
     grid-column: span 1;
   }
+}
+
+/* =========================
+    FOOTER
+   ========================= */
+
+.site-footer {
+  position: relative; /* ← QUESTO MANCAVA */
+  background: linear-gradient(180deg, #0f0f0f 0%, #080808 100%);
+  padding: 4rem 1.5rem 2rem;
+  color: #ddd;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  max-width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5f500, transparent);
+  opacity: 0.9;
+}
+
+.footer-col:first-child {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-col {
+  position: relative;
+}
+
+.footer-col:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.04);
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.footer-logo {
+  width: 230px;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 0.6rem;
+}
+
+.footer-col a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #f5f500;
+  transform: translateX(3px);
+}
+
+.footer-vat {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 0.6rem;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid #222;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* =========================
+    BACK TO TOP BUTTON
+   ========================= */
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #111;
+  color: #f5f500;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+  z-index: 999;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  transform: translateY(-3px);
 }

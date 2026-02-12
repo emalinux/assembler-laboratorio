@@ -1,11 +1,15 @@
 - title: "Assistenza avanzata"
-  text: "Ripristino sistemi RAID su sistemi fotovoltaici ''Gruppo T&G'' , SEA, TEG - Termografie schede elettroniche - Analisi temporali tensione/temperatura."
+  icon: "🛠"
+  text: "Ripristino sistemi RAID su sistemi fotovoltaici \"Gruppo T&G\", SEA, TEG. Termografie su schede elettroniche e analisi temporali di tensione e temperatura per diagnosi tecniche mirate."
 
 - title: "Riversamento VHS / MiniDV"
-  text: "Riversamenti video analogici e digitali usando la tecnologia piu' avanzata disponibile attualmente."
+  icon: "📼"
+  text: "Riversamenti video analogici e digitali utilizzando strumentazione professionale. Conversione e digitalizzazione con la tecnologia più avanzata disponibile, preservando qualità e contenuti originali."
 
 - title: "Elettronica e prototipazione"
-  text: "Condensatori, resistori, mosfets, schede prototipazione, leds, pulsanti, connettori, da noi recapping schede elettroniche vintage in giornata ."
+  icon: "🔬"
+  text: "Condensatori, resistori, mosfet, schede di prototipazione, LED, pulsanti e connettori. Recapping di schede elettroniche vintage in giornata e interventi su componentistica discreta e SMD."
 
 - title: "Analisi e termografie"
-  text: "Servizio di termografia e analisi avanzata delle temperature, perizie termografiche su schede elettroniche e componenti."
+  icon: "🌡"
+  text: "Servizio di termografia e analisi avanzata delle temperature. Perizie termografiche su schede elettroniche e componenti per individuare surriscaldamenti, anomalie e difetti nascosti."
