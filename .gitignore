@@ -1,4 +1,15 @@
+# Hugo build output
 /public/
-/resources/
-/.hugo_build.lock
+
+# OS
 .DS_Store
+
+# Node (se mai lo userai)
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log

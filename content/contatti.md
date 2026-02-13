@@ -5,7 +5,7 @@ title: "Contatti"
 ## Come trovarci
 
 **Assembler Computer**  
-Via 20 Settembre 11 – Cuneo  
+Via 20 Settembre 11 – 12100 - Cuneo  
 _(vicino al cinema Monviso)_
 
 ---
