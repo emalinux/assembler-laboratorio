@@ -147,14 +147,14 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
   align-items: center;
 }
 
 .hero-main-media img {
   width: 100%;
-  max-width: 250px;   /* QUESTO È IL GAME CHANGER */
+  max-width: 300px;   /* QUESTO È IL GAME CHANGER */
   margin: 0 auto;
 }
 
