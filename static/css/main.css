@@ -975,6 +975,19 @@ html {
   pointer-events: auto;
 }
 
+.thank-you-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #111;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 #backToTop:hover {
   transform: translateY(-3px);
 }
