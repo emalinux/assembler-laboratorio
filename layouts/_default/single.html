@@ -21,21 +21,35 @@
   </section>
 
   <section class="contacts-form">
-    <h2>Scrivici</h2>
+  <h2>Scrivici</h2>
 
-    <form name="contatti" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contatti">
+  <form 
+    name="contatti" 
+    method="POST" 
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <!-- necessario -->
+    <input type="hidden" name="form-name" value="contatti">
+    <input type="hidden" name="redirect" value="/grazie/" />
 
-      <div class="form-grid">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
-        <textarea name="messaggio" rows="5" placeholder="Messaggio" required></textarea>
-      </div>
+    <!-- honeypot -->
+    <p class="hidden">
+      <label>Non compilare questo campo:
+        <input name="bot-field">
+      </label>
+    </p>
 
-      <button type="submit">Invia messaggio</button>
-    </form>
-  </section>
+    <div class="form-grid">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telefono" placeholder="Telefono (opzionale)">
+      <textarea name="messaggio" rows="5" placeholder="Messaggio" required></textarea>
+    </div>
+
+    <button type="submit">Invia messaggio</button>
+  </form>
+</section>
 
 </main>
 
